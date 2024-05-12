@@ -1,0 +1,27 @@
+
+
+.home-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.home-carasoal {
+	align-content: center;
+}
+
+.home-header-left-side {
+	padding: 5px;
+	margin: 10px;
+}
+
+.home-header-right-side {
+	padding: 5px;
+	margin: 10px;
+}
+
+.home-body {
+}
+
+.movie-list {
+}
