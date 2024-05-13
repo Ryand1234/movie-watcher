@@ -34,9 +34,9 @@
 .movie-card {
 	background-color: grey;
 	height: 20vh;
-	width: 20vh;
 	padding: 10px;
 	margin: 15px;
+	flex-grow: 1;
 }
 
 .movie-list {
@@ -45,3 +45,17 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 475px) {
+	.movie-card {
+		width: 15vh;
+	}
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 476px){
+	.movie-card {
+		width: 20vh;
+	}
+}
+
