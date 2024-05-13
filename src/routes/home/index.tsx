@@ -1,6 +1,82 @@
 import './home.css';
 
 export default function Home() {
+	const movieList = [
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'SpiderMan',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		}
+	]
+	const seriesList = [
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		},
+		{
+			'title': 'Avengers',
+			'imageUrl': '',
+			'description': '',
+			'imdbId': '',
+		}
+	]
 	return (
 		<div className='home-body'>
 			<div className='home-header'>
@@ -16,31 +92,21 @@ export default function Home() {
 			</div>
 			<h2>Latest Movies</h2>
 			<div className='movie-list'>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
-				<div className='movie-card'>
-					<p>Here are some movie list</p>
-				</div>
+				{movieList.map(movie => (
+					<div className='movie-card'>
+						<p>Title: {movie.title}</p>		
+					</div>	
+				))}
 			</div>
+			<h2>Latest Series</h2>
+			<div className='movie-list'>
+				{seriesList.map(movie => (
+					<div className='movie-card'>
+						<p>Title: {movie.title}</p>		
+					</div>	
+				))}
+			</div>
+	
 		</div>
 	)
 }

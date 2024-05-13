@@ -1,0 +1,16 @@
+.footer-body {
+	background-color: grey;
+	color: black;
+	height: 20vh;
+	margin: 0;
+}
+
+.footer-data {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-data > p {
+	margin: 0;
+}
