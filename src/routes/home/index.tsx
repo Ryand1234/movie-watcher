@@ -16,7 +16,30 @@ export default function Home() {
 			</div>
 			<h2>Latest Movies</h2>
 			<div className='movie-list'>
-				<p>Here are some movie list</p>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
+				<div className='movie-card'>
+					<p>Here are some movie list</p>
+				</div>
 			</div>
 		</div>
 	)

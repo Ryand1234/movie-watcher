@@ -9,6 +9,10 @@
 .home-carasoul {
 	display: flex;
 	justify-content: center;
+	height: 30vh;
+	background-color: grey;
+	padding: 10px;
+	margin: 10px;
 }
 
 .home-header-left-side {
@@ -24,7 +28,20 @@
 .home-body {
 	background-color: black;
 	color: white;
+	padding: 10px;
+}
+
+.movie-card {
+	background-color: grey;
+	height: 20vh;
+	width: 20vh;
+	padding: 10px;
+	margin: 15px;
 }
 
 .movie-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
