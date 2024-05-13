@@ -1,6 +1,6 @@
 import './home.css';
 import { useState, useEffect } from 'react';
-
+import MovieCard from './movieCard';
 
 interface TopSevenData {
     data: any; // You can replace 'any' with the actual type of your data
@@ -8,85 +8,12 @@ interface TopSevenData {
 
 export default function Home() {
 	const [movieList, setMovieList] = useState([
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'SpiderMan',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		}
 	])
 	const [serieslist, setSeriesList] = useState([
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		},
-		{
-			'title': 'Avengers',
-			'imageUrl': '',
-			'description': '',
-			'imdbId': '',
-		}
 	])
 	useEffect(() => {
 		(async() => {
 		let top_seven = localStorage.getItem("movies")
-		console.log(top_seven);
 		if(top_seven == null) {
 			const url = 'https://imdb188.p.rapidapi.com/api/v1/getWeekTop10';
 			const options = {
@@ -114,11 +41,9 @@ export default function Home() {
 		if (top_seven_parsed !== null && typeof top_seven_parsed !== 'undefined') {
     // Now TypeScript should recognize top_seven_parsed as an object with a 'data' property
     top_seven_data = top_seven_parsed.data;
-    console.log(top_seven_data);
 } else {
     console.error("top_seven_parsed is null or undefined");
 }
-		console.log(top_seven);
 		let movies: any = [];
 		let series: any = [];
 		let carasoul: any = [];
@@ -129,7 +54,6 @@ export default function Home() {
 					"description": movie.plot.plotText.plainText,
 					"imageUrl": movie.primaryImage.imageUrl
 				}
-			console.log(curData);
 			carasoul.push(curData);
 			if(movie.titleType.id === "movie") {
 				movies.push(curData);
@@ -141,7 +65,7 @@ export default function Home() {
 		setSeriesList(series);
 		})();
 	}, []);	
-
+	console.log(movieList);
 	return (
 		<div className='home-body'>
 			<div className='home-header'>
@@ -158,19 +82,13 @@ export default function Home() {
 			<h2>Latest Movies</h2>
 			<div className='movie-list'>
 				{movieList.map(movie => (
-					<div className='movie-card'>
-						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images'/>
-						<div className='movie-card-title'>{movie.title}</div>
-					</div>	
+					<MovieCard movie={movie} />
 				))}
 			</div>
 			<h2>Latest Series</h2>
 			<div className='movie-list'>
 				{serieslist.map(movie => (
-					<div className='movie-card'>
-						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images' />
-						<div className='movie-card-title'>{movie.title}</div>
-					</div>	
+					<MovieCard movie={movie} />
 				))}
 			</div>
 	

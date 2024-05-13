@@ -49,12 +49,18 @@ p{
 	flex-wrap: wrap;
 }
 
+
+.movie-card-title {
+	text-align: center;
+	margin: auto;
+}
+
 @media only screen and (max-width: 475px) {
 	.movie-card {
-		width: 15vh;
+		width: 18vh;
 	}
 	.movie-card-images {
-		width: 15vh;
+		width: 18vh;
 		height: 20vh;
 	}
 }
@@ -67,9 +73,6 @@ p{
 	.movie-card-images {
 		width: 20vh;
 		height: 20vh;
-	}
-	.movie-card-title {
-		text-align: center;
 	}
 }
 
