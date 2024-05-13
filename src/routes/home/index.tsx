@@ -121,7 +121,7 @@ export default function Home() {
 		let movies: any = [];
 		let series: any = [];
 		let carasoul: any = [];
-		top_seven_data.map((movie:any) => {
+		top_seven_data.forEach((movie:any) => {
 			const curData = {
 					"imdbId": movie.id,
 					"title": movie.titleText.text,
@@ -129,7 +129,8 @@ export default function Home() {
 					"imageUrl": movie.primaryImage.imageUrl
 				}
 			console.log(curData);
-			if(movie.titleType.id == "movie") {
+			carasoul.push(curData);
+			if(movie.titleType.id === "movie") {
 				movies.push(curData);
 			} else {
 				series.push(curData);
@@ -157,7 +158,7 @@ export default function Home() {
 			<div className='movie-list'>
 				{movieList.map(movie => (
 					<div className='movie-card'>
-						<img src={movie.imageUrl} className='movie-card-images'/>
+						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images'/>
 						<p>{movie.title}</p>
 					</div>	
 				))}
@@ -166,7 +167,7 @@ export default function Home() {
 			<div className='movie-list'>
 				{serieslist.map(movie => (
 					<div className='movie-card'>
-						<img src={movie.imageUrl} className='movie-card-images' />
+						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images' />
 						<p>{movie.title}</p>
 					</div>	
 				))}
