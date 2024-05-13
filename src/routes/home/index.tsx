@@ -101,13 +101,14 @@ export default function Home() {
 				const response = await fetch(url, options);
 				const result = await response.json();
 				console.log(result);
-				localStorage.setItem("movies", result);
+				localStorage.setItem("movies", JSON.stringify(result));
 			} catch (error) {
 				console.error(error);
 			}
 		} else {
 			console.log(top_seven);
 		}
+		top_seven = localStorage.getItem("movies");
 		let top_seven_parsed: TopSevenData | null= JSON.parse(top_seven!);
 		let top_seven_data;
 		if (top_seven_parsed !== null && typeof top_seven_parsed !== 'undefined') {
@@ -159,7 +160,7 @@ export default function Home() {
 				{movieList.map(movie => (
 					<div className='movie-card'>
 						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images'/>
-						<p>{movie.title}</p>
+						<div className='movie-card-title'>{movie.title}</div>
 					</div>	
 				))}
 			</div>
@@ -168,7 +169,7 @@ export default function Home() {
 				{serieslist.map(movie => (
 					<div className='movie-card'>
 						<img src={movie.imageUrl} alt={movie.title} className='movie-card-images' />
-						<p>{movie.title}</p>
+						<div className='movie-card-title'>{movie.title}</div>
 					</div>	
 				))}
 			</div>

@@ -36,7 +36,6 @@ p{
 
 .movie-card {
 	background-color: grey;
-	height: 20vh;
 	padding: 10px;
 	margin: 15px;
 	display: flex;
@@ -68,6 +67,9 @@ p{
 	.movie-card-images {
 		width: 20vh;
 		height: 20vh;
+	}
+	.movie-card-title {
+		text-align: center;
 	}
 }
 
