@@ -3,6 +3,11 @@ p{
 	padding: 0;
 }
 
+.home-body > a {
+	text-decoration: None;
+	color: white;
+}
+
 .home-header {
 	display: flex;
 	flex-direction: row;
@@ -55,7 +60,7 @@ p{
 	margin: auto;
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 475px) and (min-width: 438px){
 	.movie-card {
 		width: 18vh;
 	}
@@ -72,6 +77,16 @@ p{
 	}
 	.movie-card-images {
 		width: 20vh;
+		height: 20vh;
+	}
+}
+
+@media only screen and (max-width: 437px){
+	.movie-card {
+		width: 17vh;
+	}
+	.movie-card-images {
+		width: 17vh;
 		height: 20vh;
 	}
 }

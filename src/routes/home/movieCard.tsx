@@ -23,7 +23,7 @@ function MovieCard({movie}: MovieCardProps) {
   const handleMouseLeave = () => {
     setIsFlipped(false);
   };
-
+  const url = "https://vidsrc.xyz/embed/movie/" + movie.imdbId;
   return (
     <div
       className={`movie-card ${isFlipped ? 'flipped' : ''}`}
@@ -33,12 +33,13 @@ function MovieCard({movie}: MovieCardProps) {
       <div className="flipper">
         <div className='front'>
 		<img src={movie.imageUrl} alt={movie.title} className='movie-card-images'/>
-		<div className='movie-card-title'>{movie.title}</div>
+		<div className='movie-card-title' style={{'display': isFlipped? 'none' : 'block'}}>{movie.title}</div>
 	</div>
 	<div className="back">
         	<div className='movie-card-back'>
 			<div className="movie-card-title">{movie.title}</div>
 			<div className="movie-card-description">{movie.description}</div>
+			<div className="movie-card-play"><a href={url}>Play</a></div>
 		</div>
         </div>
       </div>

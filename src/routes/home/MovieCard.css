@@ -24,6 +24,8 @@ width: 100%;
 	height: 100%;
   background: grey;
   overflow: hidden;
+  text-align: justify;
+  text-justify: inter-word;
   transform: rotateY(180deg);
 }
 
@@ -37,4 +39,42 @@ width: 100%;
   max-height: 25vh; /* Example height */
   overflow: hidden;
   text-overflow: ellipsis; /* Show ellipsis when content overflows */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
+
+.movie-card-description {
+	margin: 1px;
+	overflow: scroll;
+	flex-grow: 1;
+}
+
+.movie-card-title {
+	flex-grow: 1;
+}
+
+.movie-card-play > a {
+	text-decoration: None;
+	color: black;
+}
+
+.movie-card-play {
+	margin: 1px;
+	flex-grow: 1;
+	text-align: center;
+	background-color: lightgrey;
+	border: 1px 1px 1px 1px black;
+}
+/*
+@media only screen and (max-width: 2018px) and (min-width: 476px) {
+	.movie-card-description {
+		height: 15vh;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.movie-card-description {
+		height: 17vh;
+	}
+}*/
