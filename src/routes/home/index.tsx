@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import MovieCard from './movieCard';
 import Carousel from './carousel';
 
+import { useNavigate} from 'react-router-dom';
+
 interface TopSevenData {
     data: any; // You can replace 'any' with the actual type of your data
 }
@@ -21,6 +23,19 @@ export default function Home() {
 	const [serieslist, setSeriesList] = useState([
 	])
 	const [carousel, setCarousel] = useState<MovieInterface[]>([])
+	const [searchText, setSearchText] = useState('');
+
+	const navigate = useNavigate();
+	const handleInputChange = (event: any) => {
+	    setSearchText(event.target.value);
+	  };
+
+	const handleSubmit = (event:any) => {
+	    event.preventDefault();
+	    // Navigate to a new URL with the search text appended as a query parameter
+	    navigate(`/watch/${searchText}`);
+	};
+
 	useEffect(() => {
 		(async() => {
 		let top_seven = localStorage.getItem("movies")
@@ -84,7 +99,15 @@ export default function Home() {
 					<p>Something on left</p>
 				</div>
 				<div className='home-header-right-side'>
-					<p>This is search bar</p>
+					<form onSubmit={handleSubmit}>
+				        	<input
+					          type="text"
+					          value={searchText}
+					          onChange={handleInputChange}
+					          placeholder="Enter your search query"
+					        />
+				        	<button type="submit">Search</button>
+					</form>
 				</div>
 			</div>
 			<div className='home-carasoul'>
