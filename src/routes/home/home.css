@@ -81,7 +81,7 @@ p{
 	}
 }
 
-@media only screen and (max-width: 437px){
+@media only screen and (max-width: 437px) and (min-width: 432px){
 	.movie-card {
 		width: 17vh;
 	}
@@ -90,4 +90,27 @@ p{
 		height: 20vh;
 	}
 }
+
+@media only screen and (max-width: 432px) and (min-width: 334px){
+	.movie-card {
+		width: 16vh;
+		font-size: x-small;
+	}
+	.movie-card-images {
+		width: 16vh;
+		height: 20vh;
+	}
+}
+
+@media only screen and (max-width: 333px) and (min-width: 0px){
+	.movie-card {
+		width: 15vh;
+		font-size: x-small;
+	}
+	.movie-card-images {
+		width: 15vh;
+		height: 20vh;
+	}
+}
+
 
