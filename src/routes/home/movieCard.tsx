@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MovieCard.css'; // Import your CSS file for styling
+import { Link } from 'react-router-dom';
 
 interface MovieInterface {
 	title: string;
@@ -23,7 +24,7 @@ function MovieCard({movie}: MovieCardProps) {
   const handleMouseLeave = () => {
     setIsFlipped(false);
   };
-  const url = "https://vidsrc.xyz/embed/movie/" + movie.imdbId;
+  const url = "/watch/" + movie.imdbId;
   return (
     <div
       className={`movie-card ${isFlipped ? 'flipped' : ''}`}
@@ -39,7 +40,7 @@ function MovieCard({movie}: MovieCardProps) {
         	<div className='movie-card-back'>
 			<div className="movie-card-title">{movie.title}</div>
 			<div className="movie-card-description">{movie.description}</div>
-			<div className="movie-card-play"><a href={url}>Play</a></div>
+			<Link to={url}><div className="movie-card-play">Play</div></Link>
 		</div>
         </div>
       </div>

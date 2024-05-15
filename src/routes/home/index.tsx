@@ -1,16 +1,26 @@
 import './home.css';
 import { useState, useEffect } from 'react';
 import MovieCard from './movieCard';
+import Carousel from './carousel';
 
 interface TopSevenData {
     data: any; // You can replace 'any' with the actual type of your data
 }
+
+interface MovieInterface {
+	title: string;
+	description: string;
+	imageUrl: string;
+	imdbId: string;
+}
+
 
 export default function Home() {
 	const [movieList, setMovieList] = useState([
 	])
 	const [serieslist, setSeriesList] = useState([
 	])
+	const [carousel, setCarousel] = useState<MovieInterface[]>([])
 	useEffect(() => {
 		(async() => {
 		let top_seven = localStorage.getItem("movies")
@@ -46,7 +56,7 @@ export default function Home() {
 }
 		let movies: any = [];
 		let series: any = [];
-		let carasoul: any = [];
+		let carousel: any = [];
 		top_seven_data.forEach((movie:any) => {
 			const curData = {
 					"imdbId": movie.id,
@@ -54,7 +64,7 @@ export default function Home() {
 					"description": movie.plot.plotText.plainText,
 					"imageUrl": movie.primaryImage.imageUrl
 				}
-			carasoul.push(curData);
+			carousel.push(curData);
 			if(movie.titleType.id === "movie") {
 				movies.push(curData);
 			} else {
@@ -63,6 +73,7 @@ export default function Home() {
 		})
 		setMovieList(movies);
 		setSeriesList(series);
+		setCarousel(carousel);
 		})();
 	}, []);	
 	console.log(movieList);
@@ -77,7 +88,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='home-carasoul'>
-				<p>This is some sort of carasol</p>
+				<Carousel slides={carousel} />
 			</div>
 			<h2>Latest Movies</h2>
 			<div className='movie-list'>
