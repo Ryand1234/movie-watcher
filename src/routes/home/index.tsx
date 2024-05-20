@@ -2,7 +2,7 @@ import './home.css';
 import { useState, useEffect } from 'react';
 import MovieCard from './movieCard';
 import Carousel from './carousel';
-
+import Header from '../header/index';
 import { useNavigate} from 'react-router-dom';
 
 interface TopSevenData {
@@ -23,18 +23,6 @@ export default function Home() {
 	const [serieslist, setSeriesList] = useState([
 	])
 	const [carousel, setCarousel] = useState<MovieInterface[]>([])
-	const [searchText, setSearchText] = useState('');
-
-	const navigate = useNavigate();
-	const handleInputChange = (event: any) => {
-	    setSearchText(event.target.value);
-	  };
-
-	const handleSubmit = (event:any) => {
-	    event.preventDefault();
-	    // Navigate to a new URL with the search text appended as a query parameter
-	    navigate(`/watch/${searchText}`);
-	};
 
 	useEffect(() => {
 		(async() => {
@@ -94,22 +82,7 @@ export default function Home() {
 	console.log(movieList);
 	return (
 		<div className='home-body'>
-			<div className='home-header'>
-				<div className='home-header-left-side'>
-					<p>Something on left</p>
-				</div>
-				<div className='home-header-right-side'>
-					<form onSubmit={handleSubmit}>
-				        	<input
-					          type="text"
-					          value={searchText}
-					          onChange={handleInputChange}
-					          placeholder="Enter your search query"
-					        />
-				        	<button type="submit">Search</button>
-					</form>
-				</div>
-			</div>
+			<Header />
 			<div className='home-carasoul'>
 				<Carousel slides={carousel} />
 			</div>

@@ -11,7 +11,12 @@ p{
 .home-header {
 	display: flex;
 	flex-direction: row;
+	font-size: xx-small;
 	justify-content: space-between;
+}
+
+.home-header > button {
+	font-size: xx-small;
 }
 
 .home-carasoul {
@@ -50,6 +55,7 @@ p{
 	margin: 15px;
 	display: flex;
 	flex-direction: column;
+	font-size: xx-small;
 }
 
 .movie-list {

@@ -1,5 +1,16 @@
+p{
+	margin: 0;
+	padding: 0;
+}
+
+
 .watch-body {
+	background-color: black;
+	color: white;
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	font-size: xx-small;
 }

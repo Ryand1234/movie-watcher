@@ -25,6 +25,9 @@ function MovieCard({movie}: MovieCardProps) {
     setIsFlipped(false);
   };
   const url = "/watch/" + movie.imdbId;
+  function handleClick(e: any) {
+	console.log(e);
+  }
   return (
     <div
       className={`movie-card ${isFlipped ? 'flipped' : ''}`}
@@ -40,7 +43,7 @@ function MovieCard({movie}: MovieCardProps) {
         	<div className='movie-card-back'>
 			<div className="movie-card-title">{movie.title}</div>
 			<div className="movie-card-description">{movie.description}</div>
-			<Link to={url}><div className="movie-card-play">Play</div></Link>
+			<Link onClick={()=> localStorage.setItem('current_movie', JSON.stringify(movie))} to={url}><div className="movie-card-play">Play</div></Link>
 		</div>
         </div>
       </div>
