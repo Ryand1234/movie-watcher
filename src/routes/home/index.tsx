@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import MovieCard from './movieCard';
 import Carousel from './carousel';
 import Header from '../header/index';
-import { useNavigate} from 'react-router-dom';
 
 interface TopSevenData {
     data: any; // You can replace 'any' with the actual type of your data

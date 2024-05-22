@@ -7,7 +7,7 @@ export default function Watch() {
 	console.log(data);
 	const embedUrl = 'https://vidsrc.xyz/embed/movie/' + videoId;
 	let movieData = localStorage.getItem('current_movie');
-	if(movieData == undefined || movieData == null)
+	if(movieData === undefined || movieData === null)
 	{
 		alert('no data for movie');
 		movieData = {

@@ -25,9 +25,6 @@ function MovieCard({movie}: MovieCardProps) {
     setIsFlipped(false);
   };
   const url = "/watch/" + movie.imdbId;
-  function handleClick(e: any) {
-	console.log(e);
-  }
   return (
     <div
       className={`movie-card ${isFlipped ? 'flipped' : ''}`}
