@@ -36,7 +36,7 @@ width: 100%;
 
 .back .movie-card-back {
   /* Adjust the height of the content area as needed */
-  max-height: 25vh; /* Example height */
+  height: 25vh; /* Example height */
   overflow: hidden;
   text-overflow: ellipsis; /* Show ellipsis when content overflows */
   display: flex;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './carousel.css';
+import { Link } from 'react-router-dom';
 
 interface MovieInterface {
 	title: string;
@@ -29,8 +30,10 @@ const Carousel = ({ slides }: CarouselProps) => {
     <div className="carousel">
       {slides.map((slide, index) => (
         <div key={index} className={index === currentSlide ? 'slide active' : 'slide'}>
+	<Link onClick={()=> localStorage.setItem('current_movie', JSON.stringify(slide))} to={`/watch/${slide.imdbId}`}>
           <img style={{height: '30vh'}}src={slide.imageUrl} alt={slide.title} />
           <div className="caption">{slide.title}</div>
+	</Link>
         </div>
       ))}
     </div>

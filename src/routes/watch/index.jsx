@@ -5,7 +5,7 @@ export default function Watch() {
 	 const { videoId } = useParams();
 	const data = useParams();
 	console.log(data);
-	const embedUrl = 'https://vidsrc.xyz/embed/movie/' + videoId;
+	const embedUrl = 'https://vidrc.xyz/embed/movie/' + videoId;
 	let movieData = localStorage.getItem('current_movie');
 	if(movieData === undefined || movieData === null)
 	{

@@ -105,7 +105,7 @@ p{
 @media only screen and (max-width: 432px) and (min-width: 334px){
 	.movie-card {
 		width: 16vh;
-		font-size: x-small;
+		font-size: medium;
 	}
 	.movie-card-images {
 		width: 16vh;
@@ -116,7 +116,7 @@ p{
 @media only screen and (max-width: 333px) and (min-width: 0px){
 	.movie-card {
 		width: 15vh;
-		font-size: x-small;
+		font-size: medium;
 	}
 	.movie-card-images {
 		width: 15vh;
