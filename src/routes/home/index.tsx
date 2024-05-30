@@ -2,7 +2,6 @@ import './home.css';
 import { useState, useEffect } from 'react';
 import MovieCard from './movieCard';
 import Carousel from './carousel';
-import Header from '../header/index';
 
 interface TopSevenData {
     data: any; // You can replace 'any' with the actual type of your data
@@ -81,7 +80,6 @@ export default function Home() {
 	console.log(movieList);
 	return (
 		<div className='home-body'>
-			<Header />
 			<div className='home-carasoul'>
 				<Carousel slides={carousel} />
 			</div>

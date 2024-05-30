@@ -8,22 +8,11 @@ p{
 	color: white;
 }
 
-.home-header {
-	display: flex;
-	flex-direction: row;
-	font-size: xx-small;
-	justify-content: space-between;
-}
-
-.home-header > button {
-	font-size: xx-small;
-}
-
 .home-carasoul {
 	display: flex;
 	justify-content: center;
 	height: 30vh;
-	background-color: grey;
+	background-color: black;
 	padding: 10px;
 	margin: 10px;
 }
@@ -33,16 +22,6 @@ p{
 	width: 100%;
 }
 
-.home-header-left-side {
-	padding: 5px;
-	margin: 10px;
-}
-
-.home-header-right-side {
-	padding: 5px;
-	margin: 10px;
-}
-
 .home-body {
 	background-color: black;
 	color: white;
@@ -50,7 +29,7 @@ p{
 }
 
 .movie-card {
-	background-color: grey;
+	background-color: black;
 	padding: 10px;
 	margin: 15px;
 	display: flex;

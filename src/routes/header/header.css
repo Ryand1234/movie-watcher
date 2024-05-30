@@ -1,3 +1,27 @@
 .search-bar {
-	border-radius: 10px;
+	border-radius: 6px;
 }
+
+.home-header-left-side {
+	padding: 5px;
+	margin: 10px;
+}
+
+.home-header-right-side {
+	padding: 5px;
+	margin: 10px;
+}
+.home-header {
+	display: flex;
+	flex-direction: row;
+	font-size: xx-small;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+}
+
+.home-header > button {
+	font-size: xx-small;
+}
+
+
