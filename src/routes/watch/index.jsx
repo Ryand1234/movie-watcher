@@ -11,6 +11,14 @@ export default function Watch() {
 	useEffect(() => {
 		console.log(data);
 		let movieData = localStorage.getItem('current_movie');
+		if(movieData !== undefined || movieData != null)
+		{
+			let testData = JSON.parse(movieData);
+			if(testData.imdbId !== videoId)
+			{
+				movieData = null;
+			}
+		}
 		if(movieData === undefined || movieData === null)
 		{
 
