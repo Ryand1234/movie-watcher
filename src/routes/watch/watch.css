@@ -4,6 +4,9 @@ p{
 	font-size: medium;
 }
 
+.watch-player {
+	margin: 5px;
+}
 
 .watch-body {
 	background-color: black;
@@ -11,7 +14,7 @@ p{
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 	font-size: xx-small;
 	height: 100vh;
@@ -19,7 +22,12 @@ p{
 
 .watch-movie-desc {
 	display: flex;
-	align-items: center;
+	margin: 5vh 15px 15px 15px;
+	padding: 10px;
 	font-size: xx-small;
-	flex-direction: column;
+}
+
+.watch-movie-info {
+	margin: 5px;
+	padding: 5px;
 }
