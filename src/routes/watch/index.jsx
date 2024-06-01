@@ -7,7 +7,7 @@ export default function Watch() {
 	const { videoId } = useParams();
 	const data = useParams();
 	const [movieData, setMovieData] = useState({})
-	const embedUrl = 'https://vidrc.xyz/embed/movie/' + videoId;
+	const embedUrl = 'https://vidsrc.xyz/embed/movie/' + videoId;
 	useEffect(() => {
 		console.log(data);
 		let movieData = localStorage.getItem('current_movie');
