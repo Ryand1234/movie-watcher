@@ -83,11 +83,11 @@ p{
 
 @media only screen and (max-width: 432px) and (min-width: 334px){
 	.movie-card {
-		width: 16vh;
+		width: 15vh;
 		font-size: medium;
 	}
 	.movie-card-images {
-		width: 16vh;
+		width: 15vh;
 		height: 20vh;
 	}
 }

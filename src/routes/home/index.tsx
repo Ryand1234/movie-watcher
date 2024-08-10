@@ -1,6 +1,6 @@
 import './home.css';
 import { useState, useEffect } from 'react';
-import MovieCard from './movieCard';
+import MovieCard from '../movie-card/movieCard';
 import Carousel from './carousel';
 
 interface TopSevenData {

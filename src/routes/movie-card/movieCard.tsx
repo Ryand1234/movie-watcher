@@ -16,8 +16,8 @@ interface MovieCardProps {
 
 function MovieCard({movie}: MovieCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleMouseEnter = () => {
+  console.log(movie)
+	const handleMouseEnter = () => {
     setIsFlipped(true);
   };
 
